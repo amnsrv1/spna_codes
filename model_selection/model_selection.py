@@ -180,7 +180,8 @@ Nres3 = nestle_sample(pta3)
 print('for model 3 evidence is ',Nres3.logz, '+/-',Nres3.logzerr)
 Nres4 = nestle_sample(pta4)
 print('for model 4 evidence is ',Nres4.logz, '+/-',Nres4.logzerr)
-
+Nres5 = nestle_sample(pta5)
+print('for model 5 evidence is ',Nres5.logz, '+/-',Nres5.logzerr)
 
 
 
