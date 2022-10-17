@@ -220,7 +220,7 @@ samples_nestle5  = nestle.resample_equal(Nres5.samples, Nres5.weights)
 fig5 = corner.corner(samples_nestle5,labels=list(pta5.param_names), label_kwargs={"fontsize": 7},
                      quantiles=(0.16, 0.5, 0.84),show_titles=False)
 plt.suptitle(psrname, fontsize=16)
-plt.savefig(psrname+"_model5.pdf')
+plt.savefig(psrname+"_model5.pdf")
 
 et = time.time()
 ep_time = (et-st)
