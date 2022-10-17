@@ -52,7 +52,7 @@ psrname = "J1909-3744"
 
 
 
-parfile = "../"+psrname+".par"
+parfile = "../"+psrname+".NB.par"
 timfile = "../"+psrname+".NB.tim"
 
 psr = Pulsar(parfile, timfile,ephem='DE438')
