@@ -75,8 +75,8 @@ selection_by_groups = Selection(by_groups)
 #Setting up Noise priors
 
 #White noise
-efac = parameter.Uniform(1, 10)
-equad = parameter.Uniform(-9,0)
+efac = parameter.Uniform(0.1, 8)
+equad = parameter.Uniform(-8,-2)
 
 
 #White noise
