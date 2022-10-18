@@ -175,7 +175,7 @@ def nestle_sample(pta):
 Nres1 = nestle_sample(pta1)
 print('for model 1 evidence is ',Nres1.logz, '+/-',Nres1.logzerr)
 Nres2 = nestle_sample(pta2)
-print('for model 1 evidence is ',Nres2.logz, '+/-',Nres2.logzerr)
+print('for model 2 evidence is ',Nres2.logz, '+/-',Nres2.logzerr)
 Nres3 = nestle_sample(pta3)
 print('for model 3 evidence is ',Nres3.logz, '+/-',Nres3.logzerr)
 Nres4 = nestle_sample(pta4)
@@ -221,7 +221,7 @@ samples_nestle5  = nestle.resample_equal(Nres5.samples, Nres5.weights)
 fig5 = corner.corner(samples_nestle5,labels=list(pta5.param_names), label_kwargs={"fontsize": 7},
                      quantiles=(0.16, 0.5, 0.84),show_titles=False)
 plt.suptitle(psrname, fontsize=16)
-plt.savefig(psrname+"_model5.pdf')
+plt.savefig(psrname+'_model5.pdf')
 
 
 et = time.time()
