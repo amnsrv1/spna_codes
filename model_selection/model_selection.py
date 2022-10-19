@@ -111,7 +111,7 @@ ef = white_signals.MeasurementNoise(efac=efac, selection=selection_by_groups)
 wn = white_signals.MeasurementNoise(efac=efac,log10_t2equad = equad, selection=selection_by_groups) 
 
 
-
+#Red noise
 arn = red_noise_block(psd='powerlaw', prior='log-uniform', Tspan=Tspan,
                     components=arn_modes, gamma_val=None, coefficients=False,
                     select=None, modes=None, wgts=None, combine=True,
@@ -119,7 +119,7 @@ arn = red_noise_block(psd='powerlaw', prior='log-uniform', Tspan=Tspan,
                     logmin=None, logmax=None, dropout=False, k_threshold=0.5)
 
 
-
+#Scattering noise
 scn = chromatic_noise_block(gp_kernel='diag', psd='powerlaw',
                           nondiag_kernel='periodic',
                           prior='log-uniform', dt=15, df=200,
@@ -127,7 +127,7 @@ scn = chromatic_noise_block(gp_kernel='diag', psd='powerlaw',
                           Tspan=Tspan, name='scat', components=sc_modes,
                           coefficients=False)
 
-
+#DM Noise
 dmn = dm_noise_block(gp_kernel='diag', psd='powerlaw', nondiag_kernel='periodic',
                    prior='log-uniform', dt=15, df=200,
                    Tspan=Tspan, components=dm_modes,
@@ -138,7 +138,7 @@ dmn = dm_noise_block(gp_kernel='diag', psd='powerlaw', nondiag_kernel='periodic'
 # timing model
 tm = gp_signals.TimingModel(use_svd=True, normed=True, coefficients=False)
 
-#LET US DEFINE 4 DIFFERENT MODEL COMBINATIONS TO COMPARE THEIR EVIDENCES
+#LET US DEFINE 5 DIFFERENT MODEL COMBINATIONS TO COMPARE THEIR EVIDENCES
 
 model1 = wn + tm
 model2 = wn + arn + tm
