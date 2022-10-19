@@ -181,31 +181,31 @@ def dynesty_sample(pta):
 Dres1 = dynesty_sample(pta1)
 print("For model 1, log evidence = {} ± {}".format(Dres1.logz[-1], Dres1.logzerr[-1]))
 et = time.time()
-elapsed_time = et - st
+ep_time = et - st
 print('elapsed time:', ep_time, 's') 
 
 Dres2 = dynesty_sample(pta2)
 print("For model 2, log evidence = {} ± {}".format(Dres2.logz[-1], Dres2.logzerr[-1]))
 et = time.time()
-elapsed_time = et - st
+ep_time = et - st
 print('elapsed time:', ep_time, 's') 
 
 Dres3 = dynesty_sample(pta3)
 print("For model 3, log evidence = {} ± {}".format(Dres3.logz[-1], Dres3.logzerr[-1]))
 et = time.time()
-elapsed_time = et - st
+ep_time = et - st
 print('elapsed time:', ep_time, 's') 
 
 Dres4 = dynesty_sample(pta4)
 print("For model 4, log evidence = {} ± {}".format(Dres4.logz[-1], Dres4.logzerr[-1]))
 et = time.time()
-elapsed_time = et - st
+ep_time = et - st
 print('elapsed time:', ep_time, 's') 
 
 Dres5 = dynesty_sample(pta5)
 print("For model 5, log evidence = {} ± {}".format(Dres5.logz[-1], Dres5.logzerr[-1]))
 et = time.time()
-elapsed_time = et - st
+ep_time = et - st
 print('elapsed time:', ep_time, 's') 
 
 
