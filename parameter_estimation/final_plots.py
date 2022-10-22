@@ -174,8 +174,8 @@ plt.savefig(psrname+"_final.pdf")
 
 
 #Plotting rednoise
-ind_redA = list(pta.param_names).index(psrj+'_red_noise_log10_A')
-ind_redgam = list(pta.param_names).index(psrj+'_red_noise_gamma')
+ind_redA = list(pta.param_names).index(psrname+'_red_noise_log10_A')
+ind_redgam = list(pta.param_names).index(psrname+'_red_noise_gamma')
 corner.corner(chain[burn:, [ind_redgam, ind_redA]], 
                     labels=[r"$\gamma$", r"$\log_{10}(A_{red})$"],
                             label_kwargs={"fontsize": 12},
@@ -185,8 +185,8 @@ plt.savefig(psrname+"_arn.pdf")
 
 
 #Plotting dmnoise
-ind_dmA = list(pta.param_names).index(psrj+'_dm_gp_log10_A')
-ind_dmgam = list(pta.param_names).index(psrj+'_dm_gp_gamma')
+ind_dmA = list(pta.param_names).index(psrname+'_dm_gp_log10_A')
+ind_dmgam = list(pta.param_names).index(psrname+'_dm_gp_gamma')
 corner.corner(chain[burn:, [ind_dmgam, ind_dmA]], 
                     labels=[r"$\gamma$", r"$\log_{10}(A_{dm})$"],
                             label_kwargs={"fontsize": 12},
@@ -198,8 +198,8 @@ plt.savefig(psrname+"_dm.pdf")
 
 
 #Plotting scnoise
-ind_scA = list(pta.param_names).index(psrj+'_scat_gp_log10_A')
-ind_scgam = list(pta.param_names).index(psrj+'_scat_gp_gamma')
+ind_scA = list(pta.param_names).index(psrname+'_scat_gp_log10_A')
+ind_scgam = list(pta.param_names).index(psrname+'_scat_gp_gamma')
 corner.corner(chain[burn:, [ind_scgam, ind_scA]],
                     labels=[r"$\gamma$", r"$\log_{10}(A_{scat})$"],
                             label_kwargs={"fontsize": 12},
