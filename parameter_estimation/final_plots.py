@@ -134,7 +134,7 @@ dmn = dm_noise_block(gp_kernel='diag', psd='powerlaw', nondiag_kernel='periodic'
 
 
 # timing model
-tm = gp_signals.TimingModel(use_svd=True)
+tm = gp_signals.TimingModel(use_svd=True, normed=True, coefficients=False)
 
 
 #final model obtained (change the model below accordingly)
