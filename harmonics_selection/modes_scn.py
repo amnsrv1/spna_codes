@@ -139,7 +139,7 @@ for k in sc:
 
 	Dres = dynesty_sample(pta)
 	
-	print(" For model with arn,dmn and scn modes as 50,40,",k,",the log evidence is = {} ± {}".format(Dres.logz[-1],Dres.logzerr[-1]))
+	print(" For model with scn modes ",k,",the log evidence is = {} ± {}".format(Dres.logz[-1],Dres.logzerr[-1]))
 	
 	et = time.time()
 	ep_time = et - st
