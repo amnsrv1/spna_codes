@@ -80,9 +80,9 @@ Tspan_chrom_years = 4*Tspan_years   # 4 times Tspan for DM and Scat noises
 
 #No. of modes for rednoises
 
-arn_modes = np.floor(Tspan_years*12)  ##taking once per month as max cadence
-dm_modes =  np.floor(Tspan_chrom_years*12)
-sc_modes =  np.floor(Tspan_chrom_years*12)
+arn_modes = int(np.floor(Tspan_years*12))  ##taking once per month as max cadence
+dm_modes =  int(np.floor(Tspan_chrom_years*12))
+sc_modes =  int(np.floor(Tspan_chrom_years*12))
 print ('arn modes, dmmodes and scmodes used are' , arn_modes, dm_modes, sc_modes,file = f)
 
 
