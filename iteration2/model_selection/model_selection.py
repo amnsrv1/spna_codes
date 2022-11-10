@@ -182,6 +182,7 @@ def dynesty_sample(pta):
 
 #Dynesty sampler run and plotting
 Dres1 = dynesty_sample(pta1)
+print("For model 1, log evidence = {} ± {}".format(Dres1.logz[-1], Dres1.logzerr[-1]))
 print("For model 1, log evidence = {} ± {}".format(Dres1.logz[-1], Dres1.logzerr[-1]), file = f)
 weights1 = np.exp(Dres1['logwt'] - Dres1['logz'][-1])
 samples1 = resample_equal(Dres1.samples, weights1)
@@ -193,6 +194,7 @@ plt.savefig(psrname+'_model1.pdf')
 
 
 Dres2 = dynesty_sample(pta2)
+print("For model 2, log evidence = {} ± {}".format(Dres2.logz[-1], Dres2.logzerr[-1]))
 print("For model 2, log evidence = {} ± {}".format(Dres2.logz[-1], Dres2.logzerr[-1]), file = f)
 weights2 = np.exp(Dres2['logwt'] - Dres2['logz'][-1])
 samples2 = resample_equal(Dres2.samples, weights2)
@@ -204,6 +206,7 @@ plt.savefig(psrname+'_model2.pdf')
 
 
 Dres3 = dynesty_sample(pta3)
+print("For model 3, log evidence = {} ± {}".format(Dres3.logz[-1], Dres3.logzerr[-1]))
 print("For model 3, log evidence = {} ± {}".format(Dres3.logz[-1], Dres3.logzerr[-1]), file = f)
 weights3 = np.exp(Dres3['logwt'] - Dres3['logz'][-1])
 samples3 = resample_equal(Dres3.samples, weights3)
@@ -215,6 +218,7 @@ plt.savefig(psrname+'_model3.pdf')
 
 
 Dres4 = dynesty_sample(pta4)
+print("For model 4, log evidence = {} ± {}".format(Dres4.logz[-1], Dres4.logzerr[-1]))
 print("For model 4, log evidence = {} ± {}".format(Dres4.logz[-1], Dres4.logzerr[-1]), file = f) 
 weights4 = np.exp(Dres4['logwt'] - Dres4['logz'][-1])
 samples4 = resample_equal(Dres4.samples, weights4)
@@ -226,6 +230,7 @@ plt.savefig(psrname+'_model4.pdf')
 
 
 Dres5 = dynesty_sample(pta5)
+print("For model 5, log evidence = {} ± {}".format(Dres5.logz[-1], Dres5.logzerr[-1]))
 print("For model 5, log evidence = {} ± {}".format(Dres5.logz[-1], Dres5.logzerr[-1]), file = f)
 weights5 = np.exp(Dres5['logwt'] - Dres5['logz'][-1])
 samples5 = resample_equal(Dres5.samples, weights5)
@@ -236,6 +241,7 @@ plt.savefig(psrname+'_model5.pdf')
 
 
 Dres6 = dynesty_sample(pta6)
+print("For model 6, log evidence = {} ± {}".format(Dres6.logz[-1], Dres6.logzerr[-1]))
 print("For model 6, log evidence = {} ± {}".format(Dres6.logz[-1], Dres6.logzerr[-1]), file = f)
 weights6 = np.exp(Dres6['logwt'] - Dres6['logz'][-1])
 samples6 = resample_equal(Dres6.samples, weights6)
