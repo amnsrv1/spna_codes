@@ -1,0 +1,15 @@
+changes made in iteration 2
+
+
+priors have been modified to fasten up the analysis, based upon the results shared by the team
+
+equad_check :  Now we will also look for ecorr along with equad
+
+
+model_selection : a new model has been introduced, model6 = wn + dmn + tm (only dmnoise as rednoise). Also the number of modes here is not a function of timespan, hence it will be different for pulsars with different timespans. We have also changes tspan for dmn and crn to 4 * tspan, as we are not using DM1 and DM2, hence the timing model would struggle to fit. 
+
+
+
+harmonic_selection: Similar to model_selection, we will change the tspan to 4*tspan for chromatic rednoises, and number of fourier modes will be a function of tspan
+
+
