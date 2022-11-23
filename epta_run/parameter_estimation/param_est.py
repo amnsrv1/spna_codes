@@ -42,12 +42,6 @@ from PTMCMCSampler.PTMCMCSampler import PTSampler as ptmcmc
 import time
 st = time.time()
 
-tmin = psr.toas.min()
-tmax = psr.toas.max()
-Tspan = np.max(tmax) - np.min(tmin)
-
-Tspan_years = Tspan/ 365.25 / 24 / 60 / 60
-print(Tspan_years)  # time span of data in years
 
 #No. of modes for rednoises as obtained in previous steps. make sure you also update the model below
 
