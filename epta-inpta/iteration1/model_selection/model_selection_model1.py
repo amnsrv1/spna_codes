@@ -88,8 +88,7 @@ equad = parameter.Uniform(-8,-2)
 
 #White noise
 ef = white_signals.MeasurementNoise(efac=efac, selection=selection_by_groups)
-wn = white_signals.MeasurementNoise(efac=efac,log10_t2equad = equad, selection=selection_by_groups) 
-ec = white_signals.EcorrKernelNoise(log10_ecorr=ecorr, selection=selection_by_groups)
+wn = white_signals.MeasurementNoise(efac=efac,log10_t2equad = equad, selection=selection_by_groups)
 
 
 arn = red_noise_block(psd='powerlaw', prior='log-uniform', Tspan=Tspan,
