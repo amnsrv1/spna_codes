@@ -27,6 +27,8 @@ from enterprise.signals.selections import custom_backends_dict, by_freq_band
 
 psrname = "J1909-3744"
 
+#creating a txt file for saving output
+f= open("model_selection_"+psrname+".txt","w+")
 
 #####Importing parfile and timfile#####
 
