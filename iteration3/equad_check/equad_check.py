@@ -122,10 +122,6 @@ plt.savefig(psrname+'_model2.pdf')
 
 
 
-et = time.time()
-ep_time = (et-st)
-print('elapsed time:', ep_time, 's')  
-
 
 f.close()
 
