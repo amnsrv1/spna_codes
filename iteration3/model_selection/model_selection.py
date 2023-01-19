@@ -102,9 +102,8 @@ def prior_transform_fn(pta):
 
 def dynesty_sample(pta):
     prior_transform = prior_transform_fn(pta)
-    with  Pool() as pool:
-        sampler = dynesty.NestedSampler(pta.get_lnlikelihood, prior_transform, len(pta.params),bound='multi',pool=pool,queue_size=os.cpu_count(), bootstrap = 0)
-        sampler.run_nested(dlogz = 0.1, print_progress=False )
+    sampler = dynesty.NestedSampler(pta.get_lnlikelihood, prior_transform, len(pta.params),bound='multi')
+    sampler.run_nested(dlogz = 0.1, print_progress=False )
     res = sampler.results
     return res
 
@@ -177,12 +176,7 @@ samples6 = resample_equal(Dres6.samples, weights6)
 fig6 = corner.corner(samples6,labels=list(pta6.param_names), label_kwargs={"fontsize": 7},
                      quantiles=(0.16, 0.5, 0.84),show_titles=True)
 plt.savefig(psrname+'_model6.pdf')
-
-
-
-et = time.time()
-ep_time = (et-st)
-print('elapsed time:', ep_time, 's')  
+ 
 
 
 f.close()
