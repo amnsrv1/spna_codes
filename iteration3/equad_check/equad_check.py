@@ -32,7 +32,7 @@ psrname = "J1909-3744"
 
 
 parfile = "../"+psrname+".DM1DM2.par"
-timfile = "../"+psrname+".NB.tim"
+timfile = "../"+psrname+".final.tim"
 psr = Pulsar(parfile, timfile,ephem='DE440')
 
 tmin = psr.toas.min()
