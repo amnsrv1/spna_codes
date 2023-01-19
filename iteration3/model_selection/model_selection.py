@@ -34,7 +34,7 @@ f= open("model_selection_"+psrname+".txt","w+")
 
 
 parfile = "../"+psrname+".DM1DM2.par"
-timfile = "../"+psrname+".NB.tim"
+timfile = "../"+psrname+".final.tim"
 psr = Pulsar(parfile, timfile,ephem='DE440')
 
 tmin = psr.toas.min()
