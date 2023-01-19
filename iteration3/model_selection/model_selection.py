@@ -80,12 +80,12 @@ model6 = wn + dmn + tm
 
 # initialize PTA
 
-pta1 = signal_base.PTA([model1(psr)])
-pta2 = signal_base.PTA([model2(psr)])
-pta3 = signal_base.PTA([model3(psr)])
-pta4 = signal_base.PTA([model4(psr)])
-pta5 = signal_base.PTA([model5(psr)])
-pta6 = signal_base.PTA([model6(psr)])
+pta1 = PTA([model1(psr)])
+pta2 = PTA([model2(psr)])
+pta3 = PTA([model3(psr)])
+pta4 = PTA([model4(psr)])
+pta5 = PTA([model5(psr)])
+pta6 = PTA([model6(psr)])
 
 ### PRIOR TRANSFORM, DYNESTY
 
