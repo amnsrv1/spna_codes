@@ -106,7 +106,7 @@ weights1 = np.exp(Dres1['logwt'] - Dres1['logz'][-1])
 samples1 = resample_equal(Dres1.samples, weights1)
 fig1 = corner.corner(samples1,labels=list(pta1.param_names), label_kwargs={"fontsize": 7},
                      quantiles=(0.16, 0.5, 0.84),show_titles=True)
-plt.savefig(psrname+'_model1.pdf')
+plt.savefig(psrname_equad+'_model1.pdf')
 
 
 
@@ -118,7 +118,7 @@ weights2 = np.exp(Dres2['logwt'] - Dres2['logz'][-1])
 samples2 = resample_equal(Dres2.samples, weights2)
 fig2 = corner.corner(samples2,labels=list(pta2.param_names), label_kwargs={"fontsize": 7},
                      quantiles=(0.16, 0.5, 0.84),show_titles=True)
-plt.savefig(psrname+'_model2.pdf')
+plt.savefig(psrname_equad+'_model2.pdf')
 
 
 
