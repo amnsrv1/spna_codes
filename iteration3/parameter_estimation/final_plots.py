@@ -124,8 +124,8 @@ plt.savefig(psrname+"_dm.pdf")
 
 
 #Plotting scnoise
-ind_scA = list(pta.param_names).index(psrname+'_scat_gp_log10_A')
-ind_scgam = list(pta.param_names).index(psrname+'_scat_gp_gamma')
+ind_scA = list(pta.param_names).index(psrname+'_chrom_gp_log10_A')
+ind_scgam = list(pta.param_names).index(psrname+'_chrom_gp_gamma')
 corner.corner(chain[burn:, [ind_scgam, ind_scA]],
                     labels=[r"$\gamma$", r"$\log_{10}(A_{scat})$"],
                             label_kwargs={"fontsize": 12},
