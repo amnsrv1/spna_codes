@@ -67,7 +67,7 @@ scn = chromatic_noise_block(gp_kernel='diag',idx=4, components=sc_modes)
 
 
 #Please enter final model obtained from previous steps
-model = wn + arn + dmn + scn + tm  #As obtained in previous steps 
+model = wn/ef + arn + dmn + scn + tm  #As obtained in previous steps 
 
 
 # initialize PTA
