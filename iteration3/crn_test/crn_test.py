@@ -43,9 +43,9 @@ Tspan_years = Tspan/ 365.25 / 24 / 60 / 60
 print(Tspan_years)  # time span of data in years
 
 #No. of modes for rednoises (use only those which are included in model. Others you can keep commented out)
-#arn_modes = 40 
-#dm_modes = 40
-#sc_modes = 40
+#arn_modes = 
+#dm_modes =
+#sc_modes = 
 
 
 def by_groups(flags):
@@ -87,7 +87,7 @@ ndim = len(x0)
 cov = np.diag(np.ones(ndim) * 0.01**2) # helps to tune MCMC proposal distribution
 
 # where chains will be written to
-outdir = 'output_param_est/'.format(str(psr.name))
+outdir = 'output_param_est_crn/'.format(str(psr.name))
 
 
 # sampler object
@@ -118,7 +118,7 @@ fig = corner.corner(samples,labels=list(pta.param_names), label_kwargs={"fontsiz
                      quantiles=(0.16, 0.5, 0.84),show_titles=True)
 plt.suptitle(psrname, fontsize=16)
 
-plt.savefig(psrname+"_final_crntest.pdf")
+plt.savefig(psrname+"_final_crn.pdf")
 
 
 #Plotting crnnoise
@@ -132,5 +132,4 @@ corner.corner(chain[burn:, [ind_crnidx,ind_crngam, ind_crnA]],
                             levels=[0.68,0.95], color='teal', show_titles=True);
 plt.suptitle(psrname_CRN_test,x=0.75, fontsize=16)
 plt.savefig(psrname+"_crn.pdf")
-
 
