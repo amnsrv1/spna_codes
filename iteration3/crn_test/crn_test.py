@@ -130,6 +130,6 @@ corner.corner(chain[burn:, [ind_crnidx,ind_crngam, ind_crnA]],
                     labels=[r"idx", r"$\gamma$", r"$\log_{10}(A_{crn})$" ],
                             label_kwargs={"fontsize": 12},
                             levels=[0.68,0.95], color='teal', show_titles=True);
-plt.suptitle(psrname_CRN_test,x=0.75, fontsize=16)
+plt.suptitle(psrname,x=0.75, fontsize=16)
 plt.savefig(psrname+"_crn.pdf")
 
